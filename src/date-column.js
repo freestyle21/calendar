@@ -25,7 +25,7 @@ var DateColumn = BaseColumn.extend({
     model: {
       getter: function() {
         var date = createDateModel(
-          this.get('focus'),
+          moment(this.get('focus').format('YYYY-MM-DD')),
           this.get('startDay'),
           this.get('range'),
           this.get('process'),
